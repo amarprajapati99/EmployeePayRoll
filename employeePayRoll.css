@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100;
+  height: 100%;
 }
 
 .header {
@@ -16,7 +16,7 @@ body {
   border: 0px solid green;
 }
 
-.log-content {
+.logo-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,12 +24,12 @@ body {
   width: 80%;
 }
 
-.log-content-img {
+.logo-content-img {
   border: solid 0px #42515f;
 }
 
 .emp-text {
-  font: normal normal bold 20px/25px Montserrat;
+  font: normal normal bold 22px/25px Montserrat;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
   color: #82a70c;
@@ -43,6 +43,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* UC-2 */
 
 .form-content {
   min-height: calc(100% - 80px);
@@ -80,11 +82,11 @@ body {
   border: 0px solid green;
 }
 
-.lable {
+.label {
   min-width: 140px;
 }
 
-.lable {
+label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
@@ -94,7 +96,6 @@ body {
   color: #42515f;
   opacity: 1;
   font-family: Roboto;
-  padding: 12px 12px 12px 0;
 }
 
 .input {
@@ -104,22 +105,8 @@ body {
   border-radius: 4px;
   resize: vertical;
 }
-profile-radio-content {
-  display: flex;
-  flex-direction: row;
-}
 
-.profile-radio-content > label {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.profile {
-  width: 40px;
-  border-radius: 50%;
-  margin-left: 12px;
-}
+/* UC-3 */
 
 .profile-radio-content {
   display: flex;
@@ -138,7 +125,9 @@ profile-radio-content {
   margin-left: 12px;
 }
 
-.select {
+/* UC-5 */
+
+select {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -146,8 +135,10 @@ profile-radio-content {
   font: normal normal normal 16px Roboto;
   letter-spacing: 0px;
   color: #42515f;
-  background-color: transparent;
+  background-color: tranparent;
 }
+
+/* UC-6 and UC-7 */
 
 .buttonParent {
   display: flex;
@@ -165,28 +156,58 @@ profile-radio-content {
   background: transparent;
   border: none;
   font-weight: 400;
-  min-width: 148px;
-  padding: 7px;
-  border: 7px;
+  min-width: 140px;
+  padding: 7px 7px;
+  border: 1px solid #707070;
   cursor: pointer;
 }
 
 .submitButton {
-  border: none;
-  background-color: #f5f5f5;
   margin-right: 30px;
+  background: #e2e2e2 0% 0% no-repeat padding-box;
+  border: 1px solid #969696;
+  opacity: 1;
+  border-radius: 5px;
 }
 
-.cancelButoon {
-  text-decoration: node;
+.submitButton:hover {
+  background-color: #82a70c;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.cancelButton {
+  margin-left: 140px;
+  text-decoration: none;
   text-align: center;
+  border: 1px solid #969696;
+  background: #e2e2e2 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.cancelButton:hover {
+  background-color: #707070;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.resetButton {
+  background: #e2e2e2 0% 0% no-repeat padding-box;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  opacity: 1;
+}
+.resetButton:hover {
+  background-color: #707070;
+  text-decoration: none;
+  color: #f5f5f5;
 }
 
 @media only screen and (max-width: 960px) {
-  .cancelButoon {
+  .cancelButton {
     margin-left: 0px;
   }
-
   .form {
     width: 85%;
     padding: 44px 20px;
@@ -194,27 +215,18 @@ profile-radio-content {
 }
 
 @media only screen and (max-width: 600px) {
-  .submitButoon {
-    margin: 0px;
-  }
-
   .form {
     margin-top: 10px;
-    padding: 44px 20px;
   }
-
   .row {
     flex-direction: column;
   }
-
   .uploadButton {
     justify-content: flex-start;
   }
-
-  .profile-radio-content {
+  .profile-radio-button {
     flex-flow: wrap;
   }
-
   .submit-reset {
     width: 100%;
     display: flex;
@@ -223,9 +235,18 @@ profile-radio-content {
     justify-content: space-between;
     margin-bottom: 20px;
   }
-
+  .submitButton {
+    margin: 0;
+  }
   .buttonParent {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
+}
+
+error-output {
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
 }
